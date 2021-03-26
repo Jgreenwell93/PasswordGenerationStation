@@ -1,10 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var selected=[]
+var selected=[];
 var caps=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",];
 var lows=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var nums=[0,1,2,3,4,5,6,7,8,9,];
-var syms=["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]","|","\",":",";",","'","<",",",">",".","?","/"];
+// var syms=["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]","|","\\",":",";",","<",",",">",".","?","/"];
 
 // Write password to the #password input
 function writePassword() {
@@ -26,20 +26,43 @@ function writePassword() {
     }else if(length>128){
       alert("Password too long");
       return;
-    }
+    };
 
     // requesting if upper case included
     var upperCase=confirm("Include uppercase letters?");
     console.log(upperCase);
+    // if yes concat uppercase array
+    if(upperCase){
+      selected= selected.concat(caps);
+      console.log(selected);
+    }
+
     // requesting if lowercase included
     var lowerCase=confirm("Include lowercase letters?");
     console.log(lowerCase);
+    // if yes concat lowercase array
+    if(lowerCase){
+      selected=selected.concat(lows);
+      console.log(selected);
+    }
+
     // requesting if numbers included
     var numbers=confirm("Include numbers?");
     console.log(numbers);
+    // if yes concat numbers array
+    if(numbers){
+      selected=selected.concat(nums);
+      console.log(selected);
+    }
+
     // requesting if symbols included
     var symbols=confirm("Include symbols?");
     console.log(symbols);
+    // if yes concat symbols array
+    if(symbols){
+      selected=selected.concat(syms);
+      console.log(selected);
+    }
   }
 
   passwordText.value = password;
