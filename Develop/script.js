@@ -15,7 +15,7 @@ function writePassword() {
   function generatePassword(){
     // requesting password length 8-128 characters
     var length=prompt("Please enter how long you would like your password.","8-128 Characters");
-    console.log(length)
+    console.log(length);
 
     // early cancel parameter and length restrictions
     if(length===null){
@@ -35,7 +35,7 @@ function writePassword() {
     if(upperCase){
       selected= selected.concat(caps);
       console.log(selected);
-    }
+    };
 
     // requesting if lowercase included
     var lowerCase=confirm("Include lowercase letters?");
@@ -44,7 +44,7 @@ function writePassword() {
     if(lowerCase){
       selected=selected.concat(lows);
       console.log(selected);
-    }
+    };
 
     // requesting if numbers included
     var numbers=confirm("Include numbers?");
@@ -53,7 +53,7 @@ function writePassword() {
     if(numbers){
       selected=selected.concat(nums);
       console.log(selected);
-    }
+    };
 
     // requesting if symbols included
     var symbols=confirm("Include symbols?");
@@ -62,7 +62,17 @@ function writePassword() {
     if(symbols){
       selected=selected.concat(syms);
       console.log(selected);
+    };
+
+    if(!upperCase,!lowerCase,!numbers,!symbols){
+      alert("No character types selected. More input required.");
+      return;
     }
+
+    // select random values from array
+  //   for(length){
+  //     selected[Math.floor(Math.random() * selected.length)];
+  //   };
   }
 
   passwordText.value = password;
