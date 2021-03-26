@@ -76,9 +76,9 @@ function writePassword() {
     }
 
     // select random values from array
-    for(length){
+    for (i=0; i<length; i++) {
       selected[Math.floor(Math.random() * selected.length)];
-    };
+  };
   }
 
   passwordText.value = password;
