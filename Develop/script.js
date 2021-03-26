@@ -16,6 +16,11 @@ function writePassword() {
     // requesting password length 8-128 characters
     var length=prompt("Please enter how long you would like your password.","8-128 Characters");
     console.log(length);
+    console.log(typeof length);
+    // converts length variable from a string to a int
+    length=parseInt(length);
+    console.log(length);
+    console.log(typeof length);
 
     // early cancel parameter and length restrictions
     if(length===null){
@@ -53,6 +58,7 @@ function writePassword() {
     if(numbers){
       selected=selected.concat(nums);
       console.log(selected);
+    
     };
 
     // requesting if symbols included
@@ -70,9 +76,9 @@ function writePassword() {
     }
 
     // select random values from array
-  //   for(length){
-  //     selected[Math.floor(Math.random() * selected.length)];
-  //   };
+    for(length){
+      selected[Math.floor(Math.random() * selected.length)];
+    };
   }
 
   passwordText.value = password;
