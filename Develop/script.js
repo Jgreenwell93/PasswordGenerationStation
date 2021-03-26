@@ -1,5 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var selected=[]
+var caps=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",];
+var lows=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var nums=[0,1,2,3,4,5,6,7,8,9,];
+var syms=["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]","|","\",":",";",","'","<",",",">",".","?","/"];
 
 // Write password to the #password input
 function writePassword() {
@@ -24,16 +29,16 @@ function writePassword() {
     }
 
     // requesting if upper case included
-    var upperCase=confirm("Do you want to include uppercase letters?");
+    var upperCase=confirm("Include uppercase letters?");
     console.log(upperCase);
     // requesting if lowercase included
-    var lowerCase=confirm("Do you want to include lowercase letters?");
+    var lowerCase=confirm("Include lowercase letters?");
     console.log(lowerCase);
     // requesting if numbers included
-    var numbers=confirm("Do you want to include numbers?");
+    var numbers=confirm("Include numbers?");
     console.log(numbers);
     // requesting if symbols included
-    var symbols=confirm("Do you want to include symbols?");
+    var symbols=confirm("Include symbols?");
     console.log(symbols);
   }
 
